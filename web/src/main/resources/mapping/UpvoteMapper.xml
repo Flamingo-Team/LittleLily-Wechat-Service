@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.panlei.web.dao.UpvoteMapper" >
+
+    <resultMap id="UpvoteMap" type="com.panlei.web.model.Upvote" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="topic_id" property="topicID" jdbcType="VARCHAR" />
+        <result column="floor_id" property="floorID" jdbcType="VARCHAR" />
+        <result column="webchat_id" property="webchatID" jdbcType="VARCHAR" />
+        <result property="create_time" column="createTime" jdbcType="DATE" />
+    </resultMap>
+
+
+    <sql id="tableName">
+        upvote
+    </sql>
+
+    <sql id="fields">
+        id, topic_id, floor_id, webchat_id, create_time
+    </sql>
+
+    <insert id="insert" parameterType="com.panlei.web.model.Upvote" >
+        insert into
+        <include refid="tableName"/>
+        (
+        <include refid="fields"/>
+        ) values
+        (#{id,jdbcType=INTEGER}, #{topicID,jdbcType=VARCHAR}, #{floorID,jdbcType=VARCHAR}, #{webchatID,jdbcType=VARCHAR}, now())
+    </insert>
+
+    <select id="selectUpvoteByWebchatIdAndTopicIdAndFloorID" resultMap="UpvoteMap">
+        SELECT
+        <include refid="fields"/>
+        FROM
+        <include refid="tableName"/>
+        WHERE
+        webchat_id = #{webchatID}
+        AND
+        topic_id = #{topicID}
+        AND
+        floor_id = #{floorID}
+    </select>
+
+    <select id="selectUpvoteByWebchatId" resultMap="UpvoteMap">
+        SELECT
+        <include refid="fields"/>
+        FROM
+        <include refid="tableName"/>
+        WHERE
+        webchat_id = #{webchatID}
+    </select>
+
+    <select id="selectUpvoteByTopicID" resultMap="UpvoteMap">
+        SELECT
+        <include refid="fields"/>
+        FROM
+        <include refid="tableName"/>
+        WHERE
+        topic_id = #{topicID}
+    </select>
+
+    <select id="selectUpvoteByTopicIDAndFloorID" resultMap="UpvoteMap">
+        SELECT
+        <include refid="fields"/>
+        FROM
+        <include refid="tableName"/>
+        WHERE
+        topic_id = #{topicID}
+        AND
+        floor_id = #{floorID}
+    </select>
+
+
+    <delete id="deleteUpvoteByWebchatIdAndTopicIdAndFloorID">
+        DELETE FROM
+        <include refid="tableName"/>
+        WHERE
+        webchat_id = #{webchatID}
+        AND
+        topic_id = #{topicID}
+        AND
+        floor_id = #{floorID}
+    </delete>
+
+</mapper>
+

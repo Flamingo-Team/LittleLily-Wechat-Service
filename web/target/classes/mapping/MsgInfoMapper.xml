@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.panlei.web.dao.MsgInfoMapper">
+    <!--auto generated Code-->
+    <resultMap id="AllColumnMap" type="com.panlei.web.model.MsgInfo">
+        <result column="open_id" property="openId"/>
+        <result column="form_id" property="formId"/>
+        <result column="count" property="count"/>
+        <result column="insert_time" property="insertTime"/>
+    </resultMap>
+
+    <!--auto generated Code-->
+    <sql id="all_column">
+        `open_id`,
+        `form_id`,
+        `count`,
+        `insert_time`
+    </sql>
+
+    <!--auto generated Code-->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="pojo.openId">
+        INSERT INTO msg_info (
+            `open_id`,
+            `form_id`,
+            `count`,
+            `insert_time`
+        ) VALUES (
+            #{pojo.openId},
+            #{pojo.formId},
+            #{pojo.count},
+            #{pojo.insertTime}
+        )
+        on duplicate key update
+            form_id = VALUES (form_id),
+            count = VALUES (count),
+            insert_time = VALUES (insert_time)
+    </insert>
+
+    <!--auto generated Code-->
+    <insert id="insertSelective" useGeneratedKeys="true" keyProperty="pojo.openId">
+        INSERT INTO msg_info
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.openId!=null"> `open_id`,</if>
+            <if test="pojo.formId!=null"> `form_id`,</if>
+            <if test="pojo.count!=null"> `count`,</if>
+            <if test="pojo.insertTime!=null"> `insert_time`,</if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.openId!=null">#{pojo.openId},</if>
+            <if test="pojo.formId!=null">#{pojo.formId},</if>
+            <if test="pojo.count!=null">#{pojo.count},</if>
+            <if test="pojo.insertTime!=null">#{pojo.insertTime},</if>
+        </trim>
+    </insert>
+
+    <!--auto generated Code-->
+    <insert id="insertList">
+        INSERT INTO msg_info (
+        <include refid="all_column"/>
+        )VALUES
+        <foreach collection="pojos" item="pojo" index="index" separator=",">
+            (
+            #{pojo.openId},
+            #{pojo.formId},
+            #{pojo.count},
+            #{pojo.insertTime}
+            )
+        </foreach>
+    </insert>
+
+    <!--auto generated Code-->
+    <update id="update">
+        UPDATE msg_info
+        <set>
+            <if test="pojo.openId != null"> `open_id` = #{pojo.openId}, </if>
+            <if test="pojo.formId != null"> `form_id` = #{pojo.formId}, </if>
+            <if test="pojo.count != null"> `count` = #{pojo.count}, </if>
+            <if test="pojo.insertTime != null"> `insert_time` = #{pojo.insertTime} </if>
+        </set>
+        WHERE open_id = #{pojo.openId}
+    </update>
+
+    <select id="selectAllMsgInfo" resultMap="AllColumnMap">
+        SELECT * FROM msg_info
+    </select>
+
+
+
+
+</mapper>
+

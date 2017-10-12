@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.panlei.web.dao.BoardMapper">
+
+    <resultMap id="BaseResultMap" type="com.panlei.web.model.Board" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="name" property="boardName" jdbcType="VARCHAR" />
+        <result column="name_cn" property="boardNameCN" jdbcType="VARCHAR" />
+        <result column="section_name" property="sectionName" jdbcType="VARCHAR" />
+        <result column="section_value" property="sectionValue" jdbcType="VARCHAR" />
+        <result column="url" property="boardUrl" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <sql id="tableName">
+        boards
+    </sql>
+
+    <sql id="fields">
+        id, name, name_cn, section_name, section_value, url
+    </sql>
+
+    <select id="getBoardsBySectionValue" resultMap="BaseResultMap">
+        SELECT
+        <include refid="fields"/>
+        FROM
+        <include refid="tableName"/>
+        WHERE
+        section_value = #{sectionValue}
+    </select>
+
+    <select id="getAllBoards" resultMap="BaseResultMap">
+        SELECT
+        <include refid="fields"/>
+        FROM
+        <include refid="tableName"/>
+    </select>
+
+
+</mapper>

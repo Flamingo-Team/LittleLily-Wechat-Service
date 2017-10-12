@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.panlei.web.dao.AuthInfoMapper">
+    <!--auto generated Code-->
+    <resultMap id="AllColumnMap" type="com.panlei.web.model.AuthInfo">
+        <result column="open_id" property="openId"/>
+        <result column="nick_name" property="nickName"/>
+        <result column="gender" property="gender"/>
+        <result column="city" property="city"/>
+        <result column="province" property="province"/>
+        <result column="country" property="country"/>
+        <result column="avatar_url" property="avatarUrl"/>
+        <result column="union_id" property="unionId"/>
+        <result column="language" property="language"/>
+    </resultMap>
+
+    <!--auto generated Code-->
+    <sql id="all_column">
+        `open_id`,
+        `nick_name`,
+        `gender`,
+        `city`,
+        `province`,
+        `country`,
+        `avatar_url`,
+        `union_id`,
+        `language`
+    </sql>
+
+    <!--auto generated Code-->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="pojo.openId">
+        INSERT INTO auth_info (
+            `open_id`,
+            `nick_name`,
+            `gender`,
+            `city`,
+            `province`,
+            `country`,
+            `avatar_url`,
+            `union_id`,
+            `language`
+        ) VALUES (
+            #{pojo.openId},
+            #{pojo.nickName},
+            #{pojo.gender},
+            #{pojo.city},
+            #{pojo.province},
+            #{pojo.country},
+            #{pojo.avatarUrl},
+            #{pojo.unionId},
+            #{pojo.language}
+        )
+        on duplicate key update
+            nick_name = VALUES (nick_name),
+            gender = VALUES (gender),
+            city = VALUES (city),
+            province = VALUES (province),
+            country = VALUES (country),
+            avatar_url = VALUES (avatar_url),
+            union_id = VALUES (union_id),
+            language = VALUES (language)
+    </insert>
+
+    <!--auto generated Code-->
+    <insert id="insertSelective" useGeneratedKeys="true" keyProperty="pojo.openId">
+        INSERT INTO auth_info
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.openId!=null"> `open_id`,</if>
+            <if test="pojo.nickName!=null"> `nick_name`,</if>
+            <if test="pojo.gender!=null"> `gender`,</if>
+            <if test="pojo.city!=null"> `city`,</if>
+            <if test="pojo.province!=null"> `province`,</if>
+            <if test="pojo.country!=null"> `country`,</if>
+            <if test="pojo.avatarUrl!=null"> `avatar_url`,</if>
+            <if test="pojo.unionId!=null"> `union_id`,</if>
+            <if test="pojo.language!=null"> `language`,</if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.openId!=null">#{pojo.openId},</if>
+            <if test="pojo.nickName!=null">#{pojo.nickName},</if>
+            <if test="pojo.gender!=null">#{pojo.gender},</if>
+            <if test="pojo.city!=null">#{pojo.city},</if>
+            <if test="pojo.province!=null">#{pojo.province},</if>
+            <if test="pojo.country!=null">#{pojo.country},</if>
+            <if test="pojo.avatarUrl!=null">#{pojo.avatarUrl},</if>
+            <if test="pojo.unionId!=null">#{pojo.unionId},</if>
+            <if test="pojo.language!=null">#{pojo.language},</if>
+        </trim>
+    </insert>
+
+    <!--auto generated Code-->
+    <insert id="insertList">
+        INSERT INTO auth_info (
+        <include refid="all_column"/>
+        )VALUES
+        <foreach collection="pojos" item="pojo" index="index" separator=",">
+            (
+            #{pojo.openId},
+            #{pojo.nickName},
+            #{pojo.gender},
+            #{pojo.city},
+            #{pojo.province},
+            #{pojo.country},
+            #{pojo.avatarUrl},
+            #{pojo.unionId},
+            #{pojo.language}
+            )
+        </foreach>
+    </insert>
+
+    <!--auto generated Code-->
+    <update id="update">
+        UPDATE auth_info
+        <set>
+            <if test="pojo.openId != null"> `open_id` = #{pojo.openId}, </if>
+            <if test="pojo.nickName != null"> `nick_name` = #{pojo.nickName}, </if>
+            <if test="pojo.gender != null"> `gender` = #{pojo.gender}, </if>
+            <if test="pojo.city != null"> `city` = #{pojo.city}, </if>
+            <if test="pojo.province != null"> `province` = #{pojo.province}, </if>
+            <if test="pojo.country != null"> `country` = #{pojo.country}, </if>
+            <if test="pojo.avatarUrl != null"> `avatar_url` = #{pojo.avatarUrl}, </if>
+            <if test="pojo.unionId != null"> `union_id` = #{pojo.unionId}, </if>
+            <if test="pojo.language != null"> `language` = #{pojo.language} </if>
+        </set>
+        WHERE open_id = #{pojo.openId}
+    </update>
+</mapper>
+
