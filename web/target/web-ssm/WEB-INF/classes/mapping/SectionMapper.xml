@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.panlei.web.dao.SectionMapper">
+
+    <resultMap id="BaseResultMap" type="com.panlei.web.model.SectionMain" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="name" property="sectionName" jdbcType="VARCHAR" />
+        <result column="name_cn" property="sectionNameCN" jdbcType="VARCHAR" />
+        <result column="value" property="sectionValue" jdbcType="VARCHAR" />
+        <result column="url" property="sectionUrl" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <sql id="tableName">
+        sections
+    </sql>
+
+    <sql id="fields">
+        id, name, name_cn, value, url
+    </sql>
+
+    <select id="getAllSections" resultMap="BaseResultMap">
+        SELECT
+        <include refid="fields"/>
+        FROM
+        <include refid="tableName"/>
+    </select>
+</mapper>
