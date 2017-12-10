@@ -39,7 +39,7 @@
 
 #### 后期交流请关注我们的公众号：
 
-	<image src=https://github.com/Flamingo-Team/LittleLily-Wechat-Service/blob/master/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/wechat.jpg  width=344 height=344>
+   <image src=https://github.com/Flamingo-Team/LittleLily-Wechat-Service/blob/master/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/wechat.jpg  width=344 height=344>
 
 
 
