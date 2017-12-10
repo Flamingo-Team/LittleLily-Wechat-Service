@@ -1,5 +1,11 @@
 ﻿# LittleLily-Wechat-Service
+
 南大小百合的微信小程序&amp;后台服务
+
+
+### 体验线上已经运行的最新版本，请用微信扫一扫：
+
+   <image src=https://github.com/Flamingo-Team/LittleLily-Wechat-Service/blob/master/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/1505480512wx-file.jpg width=344 height=344>
 
 
 ###前端效果图：
@@ -28,7 +34,12 @@
 
 
 微信小程序的介绍链接：http://www.jianshu.com/p/e99108557aea
+
 后台使用SSM框架搭建，注释都在源码中，自行阅读。
+
+#### 后期交流请关注我们的公众号：
+
+	<image src=https://github.com/Flamingo-Team/LittleLily-Wechat-Service/blob/master/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/wechat.jpg  width=344 height=344>
 
 
 
