@@ -1,0 +1,104 @@
+.searchLetter {
+  position: fixed;
+  right: 0;
+  width: 20px;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  color: #666;
+  z-index: 1;
+}
+
+.searchLetter view {
+  height: 70rpx;
+}
+
+.touchClass {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+.showSlectedLetter {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: -50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  font-size: 26px;
+  z-index: 1;
+}
+
+.selection {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.item_letter {
+  display: flex;
+  background-color: #f8f8f8;
+  height: 36px;
+  padding-left: 10px;
+  align-items: center;
+  font-weight: 400;
+  border-bottom:1px solid #353535
+}
+
+.item_zone {
+  display: flex;
+  background-color: #fff;
+  height: 40px;
+  padding-left: 10px;
+  align-items: center;
+  font-weight: 300;
+  border-bottom: 1px solid #f8f8f8;
+}
+
+.search {
+  width: 735rpx;
+  height: 65rpx;
+  background: #f8f8f8;
+  padding: 5rpx;
+}
+
+image {
+  display: inline-block;
+  width: 35rpx;
+  height: 35rpx;
+  padding: 15rpx 15rpx 15rpx 20rpx;
+}
+
+.search-left {
+   background-color: rgba(0, 0, 0, 0.5);
+  text-align: left;
+  display:flex;
+    /* border:1px solid #ccc;
+border-radius:4px 0px 0px 4px; */
+}
+
+/* .search-left input {
+  display: inline-block;
+  height: 35rpx;
+  font-size: 30rpx;
+  align-items: center;
+} */
+
+.search-placeholder {
+  color: #fff;
+  line-height: 20rpx;
+}
+
+ .login-item-input{
+  color: #fff;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 35rpx;
+}

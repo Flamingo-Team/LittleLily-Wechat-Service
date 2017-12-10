@@ -1,0 +1,6 @@
+{
+  "backgroundTextStyle": "dark",
+  "backgroundColor": "#E6E6E6",
+  "navigationBarTitleText": "发帖",
+"enablePullDownRefresh": false
+}

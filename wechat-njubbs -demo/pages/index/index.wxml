@@ -1,0 +1,98 @@
+<view class="page me">
+  <view class="userinfo">
+    <image wx:if="{{userInfo.avatarUrl}}" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover" bindtap="imgClick"></image>
+    <button wx:else class="userinfo" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">
+
+      <image class="userinfo-avatar" src="/images/icon/default.jpg" background-size="cover"></image>
+      <text style="align-items: center;text-align:center;font-size:14px;">登录</text>
+    </button>
+    <text wx:if="{{userInfo.nickName}}" class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+
+  <navigator url="/pages/login/login" wx:if="{{bindName == 0}}">
+    <view class="view-cell view-cell-line">
+      <view class="view-cell-primary">
+        <image class="view-img" mode="scaleToFill" src="/images/icon/login.png" />
+        <text class="view-name">绑定小百合账号</text>
+      </view>
+      <view class="view-cell-arrow"></view>
+    </view>
+  </navigator>
+  <view wx:else class="view-cell view-cell-line" bindtap="logoutClick">
+    <view class="view-cell-primary">
+      <image class="view-img" mode="scaleToFill" src="/images/icon/login.png" />
+      <text class="view-name">解绑小百合账号</text>
+    </view>
+    <view class="view-cell-arrow"></view>
+  </view>
+  <view class="about">
+    <view class="boundary" />
+    <view class="user-bbs-info-container">
+      <view class="user-post-wrap" bindtap="newPostClick" hidden="{{!islogin}}">
+        <view class="user-post-icon" />
+        <view class="user-post-text-wrap">
+          <text class="user-text">发帖</text>
+        </view>
+        <view class="user-list-container">
+          <view class="post-list-num"></view>
+        </view>
+        <view class="user-arrow-wrap">
+          <view class="user-info-arrow" />
+        </view>
+      </view>
+      <view class="user-post-wrap">
+        <view class="user-join-icon" />
+        <view class="user-post-text-wrap">
+          <text class="user-text">我参与的</text>
+        </view>
+        <view class="user-list-container">
+          <view class="post-list-num"></view>
+        </view>
+        <view class="user-arrow-wrap">
+          <view class="user-info-arrow" />
+        </view>
+      </view>
+      <view class="user-post-wrap" bindtap="detailInfoClick">
+        <view class="user-reward-icon" />
+        <view class="c-minheight wx-view_yg2I9A">
+          <text class="user-text">个人主页</text>
+        </view>
+        <view class="user-list-container">
+          <view class="post-list-num"></view>
+        </view>
+        <view class="user-arrow-wrap">
+          <view class="user-info-arrow" />
+        </view>
+      </view>
+    </view>
+    <view class="user-bbs-info-container">
+      <view class="user-post-wrap" bindtap="notifyClick">
+        <view class="user-post-chat" />
+        <view class="user-post-text-wrap">
+          <text class="user-text">消息中心</text>
+        </view>
+        <view class="user-list-container">
+          <view class="post-list-num"></view>
+        </view>
+        <view class="user-arrow-wrap">
+          <view class="user-info-arrow" />
+        </view>
+      </view>
+      <view class="user-post-wrap" bindtap="aboutClick">
+
+        <view class="user-post-aboutus" />
+        <view class="user-post-text-wrap">
+          <text class="user-text">关于</text>
+        </view>
+        <view class="user-list-container">
+          <view class="post-list-num"></view>
+        </view>
+        <view class="user-arrow-wrap">
+          <view class="user-info-arrow" />
+        </view>
+      </view>
+    </view>
+    <view class="boundary" />
+
+  </view>
+</view>

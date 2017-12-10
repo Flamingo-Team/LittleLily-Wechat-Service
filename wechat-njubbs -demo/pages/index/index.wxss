@@ -1,0 +1,180 @@
+/**index.wxss**/
+
+.me {
+  height: 100%;
+}
+
+.userinfo {
+  position: relative;
+  width: 750rpx;
+  height: 300rpx;
+  background: #444;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  display: block;
+  width: 160rpx;
+  height: 160rpx;
+  margin: 20rpx;
+  /* margin-top: 50rpx; */
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #fff;
+  font-size: 28rpx;
+}
+
+.user-info-container {
+  padding: 10px 15px;
+  width: 100%;
+  display: flex;
+  border-width: 10px;
+  border-bottom-style: none;
+  border-bottom-color: rgb(245, 245, 245);
+  position: relative;
+}
+
+.user-info-wrap {
+  height: 60px;
+  width: 60%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.user-img-wrap {
+  height: 60px;
+  width: 60px;
+  border-radius: 5px;
+}
+
+.user-info-arrow {
+  width: 7px;
+  height: 7px;
+  border-width: 1px;
+  border-color: rgb(136, 136, 136);
+  border-style: none solid solid none;
+  transform: rotate(315deg) scale(1) translate(0%, 0%);
+  transition: All 0s ease;
+  -ms-transform: rotate(315deg) scale(1) translate(0%, 0%);
+  -o-transform: rotate(315deg) scale(1) translate(0%, 0%);
+  -moz-transform: rotate(315deg) scale(1) translate(0%, 0%);
+  -webkit-transform: rotate(315deg) scale(1) translate(0%, 0%);
+  -ms-transition: All 0s ease;
+  -o-transition: All 0s ease;
+  -moz-transition: All 0s ease;
+  -webkit-transition: All 0s ease;
+}
+
+.user-info-arrow-wrap {
+  position: absolute;
+  right: 15px;
+  height: 100%;
+  margin-left: 0px;
+  padding-top: 26px;
+  width: 7px;
+}
+
+.boundary {
+  height: 10px;
+  width: 100%;
+  background-color: rgba(245, 245, 245, 1);
+}
+
+.user-bbs-info-container {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.user-post-wrap {
+  width: auto;
+  height: 40px;
+  padding: 12px 15px 12px 0px;
+  display: flex;
+  margin-left: 15px;
+  border-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(245, 245, 245, 1);
+  align-items: center;
+}
+
+.user-post-text-wrap {
+  display: inline-block;
+  height: 25px;
+  position: static;
+  padding-top: 2px;
+  /* padding-bottom: 2px;
+  align-items:center; */
+}
+
+.user-text {
+  position: static;
+  font-size: 1rem;
+  line-height: 100%;
+}
+
+.user-arrow-wrap {
+  height: 0%;
+  width: 7px;
+  padding: 9px 5px 9px 0px;
+  text-align: right;
+  position: absolute;
+  right: 15px;
+}
+
+.user-list-container {
+  height: 25px;
+  position: absolute;
+  right: 20px;
+  width: 137px;
+}
+
+.user-post-icon {
+  width: 25px;
+  height: 25px;
+  background: url("http://i.pengxun.cn/static/vzan/web/post-big-pic-09.png") 0px 0px / 100% no-repeat;
+  vertical-align: middle;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+.user-join-icon {
+  width: 25px;
+  height: 25px;
+  background: url(http://i.pengxun.cn/static/vzan/web/post-big-pic-09.png) no-repeat 0 -25px;
+  vertical-align: middle;
+  margin-right: 5px;
+  display: inline-block;
+  background-size: 100%;
+}
+
+.user-reward-icon {
+  width: 25px;
+  height: 25px;
+  background: url("http://i.pengxun.cn/static/vzan/web/post-big-pic-09.png") 0px -50px / 100% no-repeat;
+  vertical-align: middle;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+.user-post-chat {
+  width: 25px;
+  height: 25px;
+  background: url("http://i.pengxun.cn/static/vzan/web/post-big-pic-09.png") 0px -100px / 100% no-repeat;
+  vertical-align: middle;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+.user-post-aboutus {
+  width: 25px;
+  height: 25px;
+  background: url("http://i.pengxun.cn/static/vzan/web/post-big-pic-09.png") 0px -200px / 100% no-repeat;
+  vertical-align: middle;
+  margin-right: 5px;
+  display: inline-block;
+}

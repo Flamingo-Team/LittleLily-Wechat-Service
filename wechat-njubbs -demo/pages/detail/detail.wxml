@@ -1,0 +1,77 @@
+<!-- detail -->
+<import src="../../wxParse/wxParse.wxml" />
+
+<page class="page detail">
+  <view class="zone" bindtap="zoneClick">
+    <text class="name">{{zoneId}}</text>
+  </view>
+  <view class="detail-post">
+
+    <view class="detail-post-title">
+      {{ detail[0].thisTitle }}
+    </view>
+  </view>
+  <view class="detail-post-meta">
+    <view class="detail-post-info">
+      <view class="detail-post-author-name">
+        <text id="{{detail[0].thisAuthor}}" bindtap="authornameClick" selectable='{{true}}'>{{detail[0].thisAuthor}}({{detail[0].thisAuthorNickname}})</text>
+      </view>
+      <view class="detail-post-time">{{ detail[0].thisTime }}</view>
+    </view>
+
+    <view class="detail-collect-item" bindtap="zanClick" data-floorid="0">
+      <image class="bar-info-item-icon" src="/images/icon/visit.png"></image>
+      <view class="bar-info-item-number">{{detail[0].thisWatchNumber}}</view>
+
+      <image class="bar-info-item-icon" src="{{detail[0].thisFloorUpvoteIsMe==1? '/images/icon/zanhl.png':'/images/icon/zan.png'}}" data-floorid="0"></image>
+      <view class="detail-post-zan-num {{detail[0].thisFloorUpvoteIsMe==1? 'hl':''}}">{{detail[0].thisFloorUpvoteNumber? detail[0].thisFloorUpvoteNumber:''}}</view>
+
+    </view>
+  </view>
+
+  <view class="detail-post-content">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view>
+
+  <view class="detail-post-comment">
+    <view class="detail-post-comment-title">评论</view>
+    <view class="detail-post-comment-list">
+      <block wx:for="{{detail}}" index="{{index}}" wx:if="{{index > 0}}" wx:key="{{index}}">
+        <view class="detail-post-comment-item" index="{{index}}" id="{{item.id}}">
+          <view class="detail-post-comment-avatar">
+          </view>
+          <view class="detail-post-comment-cell">
+            <view class="detail-post-comment-info">
+              <view class="detail-post-comment-info-cell">
+                <view class="detail-post-comment-author-name" id="{{item.thisAuthor}}" bindtap="authornameClick">{{ item.thisAuthor }}({{item.thisAuthorNickname}})</view>
+                <view class="detail-post-comment-time">{{item.thisFloor}}楼{{item.thisTime}}</view>
+              </view>
+              <view class="detail-post-comment-info-cell-image" style="text-align:right" id="{{item.id}}" data-floorid="{{index}}" bindtap="zanClick">
+                <image class="detail-post-zan" mode="scaleToFill" src="{{item.thisFloorUpvoteIsMe==1? '/images/icon/zanhl.png':'/images/icon/zan.png'}}"></image>
+                <text class="detail-post-zan-num {{item.thisFloorUpvoteIsMe==1? 'hl':''}}" wx:if="{{item.thisFloorUpvoteNumber > 0}}">{{item.thisFloorUpvoteNumber}}</text>
+              </view>
+            </view>
+
+            <block wx:for="{{ replyTemArray }}" wx:for-index="jdx" wx:for-item="j" wx:key="j">
+              <block wx:if="{{j.length>0}}">
+                <block wx:if="{{index == jdx }}" class="wxParse">
+                  <template is="wxParse" data="{{wxParseData:j}}" />
+                </block>
+              </block>
+            </block>
+          </view>
+        </view>
+      </block>
+
+    </view>
+  </view>
+
+
+  <view class="com-widget-goTop" bindtap="newComment" >
+    <image class="icon-gotop" mode="scaleToFill" src="/images/icon/Publish.png"></image>
+  </view>
+  <view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>
+  <view class="loading complete" hidden="{{!searchLoadingComplete}}">已加载全部</view>
+
+
+</page>

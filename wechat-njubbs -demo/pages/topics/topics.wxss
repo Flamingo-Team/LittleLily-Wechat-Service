@@ -1,0 +1,279 @@
+@import "../switchzone/switchzone.wxss";
+@import "/wxSearch/wxSearch.wxss";
+
+.Search-zone {
+  align-items: left;
+}
+
+.topics {
+  height: 100%;
+  overflow: hidden;
+}
+
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/*导航 nav*/
+
+.top-bar {
+  display: flex;
+  border-bottom: 1px solid #eee;
+}
+
+.top-bar-item {
+  display: block;
+  width: 83px;
+  padding: 10px;
+  margin: auto;
+  border: none;
+  text-align: center;
+  background: #fff;
+  border-radius: 0px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.top-bar-item::after {
+  height: 0;
+  width: 0;
+}
+
+.top-bar-active {
+  border-bottom: 2px solid #80bd01;
+  color: #80bd01;
+  font-weight: bold;
+}
+
+
+/*列表 list*/
+
+.scroll-posts-list {
+  overflow: auto;
+  margin-top: 0rpx;
+  background-image: url("http://bbs.nju.edu.cn/download/images/back.gif");
+  height: 100%;
+}
+
+.posts-list {
+  position: relative;
+  overflow: hidden;
+  padding: 0 15rpx;
+  border-bottom: 1rpx solid #80bd01;
+}
+
+.posts-list-info {
+  overflow: hidden;
+  display: flex;
+  margin-top: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.posts-list-info .userimg {
+  position: relative;
+  display: inline-block;
+  width: 45rpx;
+  height: 45rpx;
+  border-radius: 45rpx;
+  top: 0rpx;
+  vertical-align: middle;
+}
+
+.posts-list-info .item-box {
+  flex: 1;
+  margin-left: 30rpx;
+}
+
+.posts-list-info .item-box .userinfo {
+  display: flex;
+  font-size: 30rpx;
+  color: #353535;
+}
+
+.posts-list-info .item-box .userinfo .username,
+.posts-list-info .item-box .userinfo .time {
+  flex: 1;
+}
+
+.posts-list-info .item-box .userinfo .time {
+  text-align: right;
+  color: #555;
+}
+
+.posts-list-info .item-box .posts-title {
+  /* height: 85rpx; */
+   margin-top: 15rpx;
+  margin-bottom: 5rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #35495e;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; 
+   /* margin-top: 15rpx;
+  margin-bottom: 5rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+text-align: left;
+  padding: 10px;
+  margin: auto;
+  border: none;
+  background: transparent;
+  line-height: 1.4;
+  position:inherit; */
+}
+
+.posts-list-info .item-box  .posts-tag {
+  display: inline-block;
+  width: 80rpx;
+  height: 38rpx;
+  text-align: center;
+  line-height: 38rpx;
+  margin-right: 10rpx;
+  font-size: 26rpx;
+  color: #80bd01;
+  border: 1rpx solid #80bd01;
+}
+
+.posts-list-info .item-box .hot {
+  color: red;
+  border: 1rpx solid red;
+}
+
+.posts-list-info image {
+  display: inline-block;
+  width: 45rpx;
+  height: 45rpx;
+  border-radius: 45rpx;
+  top: 10rpx;
+  vertical-align: middle;
+}
+
+.posts-list .bar-info .bar-info-item {
+  display: inline-block;
+  line-height: 66rpx;
+}
+
+.posts-list .bar-info .bar-info-item-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.posts-list .bar-info .bar-info-item-number {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.posts-list .bar-info .bar-info-item2 {
+  display: inline-block;
+  float: right;
+  line-height: 66rpx;
+}
+
+.posts-list .bar-info .bar-info-item2 .bar-info-item-number {
+  color: #80bd01;
+}
+
+/*loading*/
+
+.loading-font {
+  font-size: 30rpx;
+}
+
+.hidden {
+  display: none;
+}
+
+.header {
+  width: 100%;
+  height: 200px;
+  background-color: #80bd01;
+}
+
+.search-area {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+  margin: 0 15px;
+}
+
+.search-words {
+  width: 75%;
+  height: 38px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px 0px 0px 4px;
+  padding-left: 10px;
+}
+
+.search-btn {
+  flex: 1;
+  height: 40px;
+  color: #f6f6f6;
+  background-color: #fcb338;
+  line-height: 38px;
+  font-size: 16px;
+  border-radius: 0px 4px 4px 0px;
+}
+
+.white-box {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hot {
+  min-height: 140px;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.hot-words {
+  display: block;
+  margin: 0 15px;
+}
+
+.hot-word {
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 0 14px !important;
+}
+
+.title-item{
+    margin-top: 15rpx;
+  margin-bottom: 5rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+text-align: left;
+  padding: 10px;
+  margin: auto;
+  border: none;
+  background: transparent;
+  line-height: 1.4;
+  position:inherit;
+}

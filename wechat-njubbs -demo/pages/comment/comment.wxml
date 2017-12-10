@@ -1,0 +1,37 @@
+<!--pages/newpost/newpost.wxml-->
+<page>
+  <form bindsubmit="submitClick">
+    <view>
+      <view class="post-title-wrap">
+        <input type="text"  value='{{title}}' class='post-title' name="textarea1" placeholder="标题" placeholder-style="font-weight: normal;" maxlength='-1' disabled='true'/>
+      </view>
+      <view class="post-mainbody-wrap">
+        <textarea bindblur="bindTextAreaBlur" class="post-mainbody" maxlength="-1" name="textarea1" placeholder="说说你的看法..." type="textarea" auto-focus/>
+      </view>
+      <scroll-view scroll-y="true" scroll-x="false">
+        <view class="post-submit-container">
+          <view class="choosed-image-list" wx:for="{{ images }}" wx:for-item="image" wx:for-index="idx" wx:key="{{ idx }}">
+            <image src="{{ image }}" mode='aspectFill' class='choosed-image' catchtap="previewImage" data-url="{{ image }}" data-urls="{{ images }}" />
+            <view class="choosed-image-delete-btn" catchtap="deleteImage" data-wepy-params-a="{{ idx }}">
+              <image class="choosed-image-delete-btn-icon" src="/images/icon/delete.png" />
+            </view>
+          </view>
+          <view class="choose-image-btn" wx:if="{{ images.length < 9 }}" bindtap="imgClick">
+            <image class="post-position-icon" src="/images/icon/choose-image.svg" />
+          </view>
+
+        </view>
+      </scroll-view>
+
+    </view>
+    <view class="post-icon-container">
+    </view>
+    <view class="submit-btn" style='margin-left:5px;margin-right:5px;'>
+      <button formType="submit" type="primary" size="default" class="submit" disabled="{{ disabled }}">
+        发送
+      </button>
+    </view>
+
+
+  </form>
+</page>

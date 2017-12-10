@@ -1,0 +1,2 @@
+/* pages/comment/comment.wxss */
+@import "../newpost/newpost.wxss";

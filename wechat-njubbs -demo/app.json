@@ -1,0 +1,49 @@
+{
+  "pages": [
+
+
+    "pages/topics/topics",
+    "pages/index/index",
+    "pages/detail/detail",
+      "pages/newpost/newpost",
+    "pages/login/login",
+        "pages/comment/comment",
+    "pages/personalInfo/personalInfo",
+    "pages/switchzone/switchzone",
+    "pages/zone/zone",
+    "pages/about/about"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#444",
+    "navigationBarTitleText": "南大小百合",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": "true"
+  },
+  "tabBar": {
+    "color": "#444",
+    "selectedColor": "#80bd01",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/topics/topics",
+        "text": "首页",
+        "iconPath": "images/bar/all.png",
+        "selectedIconPath": "images/bar/allHL.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+        "iconPath": "images/bar/me.png",
+        "selectedIconPath": "images/bar/meHL.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

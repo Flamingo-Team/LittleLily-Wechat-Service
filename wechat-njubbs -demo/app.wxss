@@ -1,0 +1,109 @@
+/**app.wxss**/
+@import "/wxParse/wxParse.wxss";
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+     /* margin-top: 36px; */
+}
+
+.page{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:'Microsoft YaHei', Helvetica, STHeiTi, sans-seri;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.view-cell{
+    padding: 25rpx 30rpx;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    font-size: 30rpx;
+}
+.view-cell-line::before{
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1rpx solid #D9D9D9;
+    color: #D9D9D9;
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    -ms-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+.view-cell-primary{
+    flex: 1;
+}
+
+.view-cell-ft{
+   text-align: right;
+   color: #888;
+}
+.view-img{
+  width: 45rpx;
+  height: 45rpx;
+  margin-right: 20rpx;
+  vertical-align: middle;
+}
+.view-name{
+  vertical-align: middle;
+}
+
+.view-cell-arrow{
+  text-align: rceight;
+  color: #888;
+}
+.view-cell-arrow::after {
+    content: " ";
+    display: inline-block;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    height:20rpx;
+    width:20rpx;
+    border-width: 1px 1px 0 0;
+    border-color: #888;
+    border-style: solid;
+    position: relative;
+    top: -2px;
+    top: -1px;
+    margin-left:10rpx;
+    margin-right: 10rpx;
+}
+
+
+.com-widget-goTop { 
+position: fixed; 
+bottom: 50px; 
+right: 5px; 
+/* background: rgba(0,0,0,1);  */
+border-radius: 50%; 
+overflow: hidden; 
+z-index: 500; 
+} 
+.com-widget-goTop .icon-gotop{ 
+ background-color: rgba(0,0,0,0.5);  
+display: inline-block; 
+width: 50px; 
+height: 50px; 
+line-height: 68px; 
+
+ font-size: 12px; 
+color: #ffffff; 
+text-align: center; 
+border-radius: 50%;  
+/* background: url(http://m.dev.vd.cn/static/xcx/v1/goo/w_2-3451cc437e.png) no-repeat center -1110px;  */
+/* -webkit-background-size: 50px auto;  */
+}

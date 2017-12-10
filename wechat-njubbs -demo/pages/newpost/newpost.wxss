@@ -1,0 +1,182 @@
+.submit-wrap {
+  display: inline;
+}
+@import "../index/index.wxss";
+
+.post-title-wrap {
+  width: 100%;
+}
+
+.post-title {
+  padding: 8px 0px 8px 8px;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.post-mainbody-wrap {
+  height: 180px;
+  border-width: 1px;
+  border-style: none;
+  border-top-style: solid;
+}
+
+.post-mainbody {
+  padding: 5px 0px 5px 5px;
+  width: 100%;
+  color: #333;
+  min-height: 170px;
+  background: #fff;
+  font-size: 12pt;
+  line-height: 26px;
+}
+
+.post-submit-container {
+  height: 80px;
+  min-height: 0px;
+  position: relative;
+  right: 0px;
+  display: flex;
+  overflow: scroll;
+  flex-wrap: nowrap;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.post-position-wrap {
+  height: 30px;
+  width: 120px;
+  min-height: 0px;
+  margin-left: 20px;
+  margin-top: 7px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  display: inline-block;
+  margin-bottom: auto;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  position: relative;
+  border-width: 0px;
+  border-style: none;
+  background-color: rgb(247, 247, 247);
+  border-radius: 20px;
+}
+
+.post-position-text {
+  position: absolute;
+  right: 2px;
+  margin-top: auto;
+  margin-bottom: 0px;
+  display: inline-block;
+  height: 16px;
+  font-size: 12px;
+  text-align: center;
+  text-indent: 0px;
+  line-height: 16px;
+  z-index: 0;
+  width: 100px;
+}
+
+.post-position-icon {
+  float: left;
+  height: 65px;
+  width: 65px;
+  margin-left: 5px;
+}
+
+.post-submit {
+  display: inline-block;
+  height: 30px;
+  min-height: 0px;
+  width: 60px;
+  margin-top: 27px;
+  position: absolute;
+  right: 20px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 12px;
+  background-size: initial;
+}
+
+.post-icon-container {
+  border-style: solid none none;
+  border-right-color: rgb(214, 214, 214);
+  border-width: 1px;
+  border-top-color: rgb(214, 214, 214);
+  border-bottom-color: rgb(214, 214, 214);
+  border-bottom-style: solid;
+}
+
+.post-type-wrap {
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+}
+
+.post-type-container {
+  border-width: 1px 1px 10px;
+  border-style: none none solid;
+  border-bottom-color: rgb(245, 245, 245);
+  border-bottom-width: 10px;
+}
+
+.user-post-wrap {
+  width: auto;
+  height: 30px;
+  padding: 12px 15px 12px 0px;
+  display: flex;
+  margin-left: 15px;
+  border-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(245, 245, 245, 1);
+}
+
+.choosed-image-list {
+  position: relative;
+  float: left;
+  width: 70px;
+  height: 70px;
+  margin-left: 5px;
+  margin-right: 5px;
+  /* margin-top: 15px; */
+  flex-shrink: 0;
+}
+
+.choosed-image {
+  width: 70px;
+  height: 70px;
+}
+
+.choosed-image-list .choosed-image-delete-btn {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 20px;
+  height: 20px;
+}
+
+.choosed-image-list .choosed-image-delete-btn-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.choose-image-btn {
+  float: left;
+  width: 70px;
+  height: 70px;
+  /* margin-top: 15px; */
+  flex-shrink: 0;
+}

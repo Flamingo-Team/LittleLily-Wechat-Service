@@ -1,0 +1,77 @@
+<!--pages/newpost/newpost.wxml-->
+<page>
+  <form bindsubmit="submitClick">
+    <view>
+      <!-- <view style="position:fixed;bottom:0;left:0;width:100%;background:#09bb07;display:flex;flex-direction:row">
+  <input type="text" value="{{input_value}}" bindinput="input" style="padding:3px;background:#ffffff;margin:5px;flex:1" />
+  <button type="default" size="mini" style="margin:5px" bindtap="submit">提交</button>
+</view> -->
+      <view class="post-title-wrap">
+        <input type="text" bindinput="titleInput" class='post-title' name="textarea1" placeholder="标题" placeholder-style="font-weight: normal;" maxlength='-1' />
+      </view>
+      <view class="post-mainbody-wrap">
+        <textarea bindblur="bindTextAreaBlur" class="post-mainbody" maxlength="-1" name="textarea1" placeholder="这一刻的想法..." type="textarea" />
+      </view>
+      <scroll-view scroll-y="true" scroll-x="false">
+        <view class="post-submit-container">
+          <!-- <view class="post-position-wrap" bindtap="positionClick"> -->
+          <view class="choosed-image-list" wx:for="{{ images }}" wx:for-item="image" wx:for-index="idx" wx:key="{{ idx }}">
+            <image src="{{ image }}" mode='aspectFill' class='choosed-image' catchtap="previewImage" data-url="{{ image }}" data-urls="{{ images }}" />
+            <view class="choosed-image-delete-btn" catchtap="deleteImage" data-wepy-params-a="{{ idx }}">
+              <image class="choosed-image-delete-btn-icon" src="/images/icon/delete.png" />
+            </view>
+          </view>
+          <view class="choose-image-btn" wx:if="{{ images.length < 9 }}" bindtap="imgClick">
+            <image class="post-position-icon" src="/images/icon/choose-image.svg" />
+            <!-- <text class="post-position-text">{{positiontext}}</text> -->
+          </view>
+
+        </view>
+      </scroll-view>
+
+    </view>
+    <view class="post-icon-container">
+      <view class="user-post-wrap" bindtap="switchZoneClick">
+        <view class="user-join-icon" />
+        <view class="user-post-text-wrap">
+          <text class="user-text">谈论区</text>
+        </view>
+        <view class="user-list-container">
+          <view class="post-list-num">{{zoneName}}</view>
+        </view>
+        <view class="user-arrow-wrap">
+          <view class="user-info-arrow" />
+        </view>
+      </view>
+      <!-- <view class="post-icon-emoj-wrap">
+      <view class="post-icon-emoj"> </view>
+      <text class="post-icon-desc">表情</text>
+    </view>
+    <view class="post-icon-emoj-wrap" bindtap="imgClick">
+      <view class="post-icon-img"></view>
+      <text class="post-icon-desc">图片</text>
+    </view>
+    <view class="post-icon-emoj-wrap" bindtap="voiceClick">
+      <view class="post-icon-voice"></view>
+      <text class="post-icon-desc">语音</text>
+    </view>
+    <view class="post-icon-emoj-wrap" bindtap="videoClick">
+      <view class="post-icon-vedio"></view>
+      <text class="post-icon-desc">视频</text>
+    </view> -->
+      <!--<view class="post-icon-emoj-wrap" >
+        <view class="post-icon-reward"></view>
+        <text class="post-icon-desc" >悬赏</text>
+    </view>-->
+
+
+    </view>
+    <view class="submit-btn" style='margin-left:5px;margin-right:5px;'>
+      <button formType="submit" type="primary" size="default" class="submit" disabled="{{ disabled }}">
+        发送
+      </button>
+    </view>
+
+
+  </form>
+</page>

@@ -1,0 +1,35 @@
+<view >
+
+  <view class="first">
+    <image class="first-img" mode="scaleToFill" src="/images/icon/nju.jpg"></image>
+        <text class="userinfo-nickname" wx:if="{{bbsuserinfo.id}}">{{bbsuserinfo.id + '(' + bbsuserinfo.name + ')'}}</text>
+        <text class="userinfo-nickname ip">{{bbsuserinfo.lastLoginIp}}</text>
+        <text class="userinfo-nickname constellation">{{bbsuserinfo.constellation}}</text>
+  </view>
+  <view class="second line">
+    <view class="two-line-text">
+      <text class="number">{{bbsuserinfo.publishCount}}</text>
+      <text>发帖</text>
+    </view>
+    <view class="two-line-text">
+      <text class="number">{{bbsuserinfo.experienceValue? bbsuserinfo.experienceValue:bbsuserinfo.experienceTitle}}</text>
+      <text>经验值</text>
+    </view>
+    <view class="two-line-text">
+
+      <text class="number">{{bbsuserinfo.loginCount}}</text>
+      <text>上站次数</text>
+    </view>
+    <view class="two-line-text">
+      <text class="number">{{bbsuserinfo.behaviourValue}}</text>
+      <text>表现值</text>
+    </view>
+    <view class="two-line-text">
+      <text class="number">{{bbsuserinfo.lifeValue}}</text>
+      <text>生命力</text>
+    </view>
+  </view>
+
+<view class="classname" wx:if="{{bbsuserinfo.selfDocument}}">{{bbsuserinfo.selfDocument}}</view>
+<view class=" " wx:else>暂无个人说明档</view>
+</view>

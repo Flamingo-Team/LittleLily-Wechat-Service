@@ -1,0 +1,67 @@
+/*login.wxss*/
+
+page {
+  height: 100%;
+  background: gray;
+}
+
+.login {
+  overflow: hidden;
+  height: 100%;
+  background: #fff;
+  background-image: url("http://bbs.nju.edu.cn/download/images/back.gif");
+  background-repeat: no-repeat;
+}
+
+.login-item {
+  text-align: center;
+  height: 100%;
+}
+
+.login-item-img {
+  width: 200rpx;
+  height: 108rpx;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.login-item-section {
+  width: 460rpx;
+  margin: 20rpx auto;
+  padding: 10rpx 15rpx;
+  border-bottom: 1rpx solid rgba(136, 136, 136, 0.6);
+  /* background: rgba(136, 136, 136, 0.6); */
+  display: flex;
+  text-align:left;
+
+}
+
+.login-item-section image {
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  padding: 15rpx 15rpx 0rpx 20rpx;
+  margin-bottom: 15rpx;
+}
+
+.login-item-section .login-item-input {
+  color: gray;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 38rpx;
+   padding:10rpx 0rpx 0rpx 10rpx; 
+
+}
+
+.login-item-button {
+  width: 490rpx;
+  margin: 50rpx auto 20rpx auto;
+}
+
+.login-button {
+  font-size: 28rpx;
+}
+
+.error-msg {
+  color: red;
+}

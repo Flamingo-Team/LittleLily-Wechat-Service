@@ -1,0 +1,27 @@
+<!--about.wxml-->
+<view class="container">
+  <view class="content">
+    <view class="version">
+      <view class="version-title">
+        <text class="title-name">南大小百合客户端</text>
+        <!-- <text class="version-text">v1.0.0</text> -->
+        <text class="version-text">v2.0.1</text>
+      </view>
+      <view>
+      </view>
+    </view>
+    <view class="describe">
+      <text class="desc-title">简介</text>
+      <view class="desc-list">
+        <text class="desc-list-item">官网：http://bbs.nju.edu.cn/</text>
+      </view>
+      <text class="desc-content">小百合bbs一直是南大人的精神家园，由于近几年各种社交媒体兴起，小百合用户量越来越少，作为多年的小百合忠实用户，真的是唏嘘不已。于是把小百合搬到小程序上，希望能让更多的校友回归小百合。</text>
+      <text class="desc-content">小百合客户端是基于南大小百合bbs的一个微信小程序，小程序目前功能还在慢慢完善，有任何反馈和建议请加微信联系。</text>
+      <text class="desc-content"></text>
+    </view>
+
+  </view>
+  <view class="footer">
+    <image src='/images/icon/wechat.jpg' class='image' bindtap='previewImage'></image>
+  </view>
+</view>

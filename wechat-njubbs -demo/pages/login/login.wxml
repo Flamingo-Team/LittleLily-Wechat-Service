@@ -1,0 +1,20 @@
+<!-- login.wxml -->
+<view class="page login">
+
+  <view class="login-item">
+    <image class="login-item-img" src="/images/icon/bbs.gif"></image>
+    <view class="login-item-section">
+      <image src="/images/icon/account.png"></image>
+      <input auto-focus placeholder="请输入账号" class="login-item-input" placeholder-style="color:gray;" bindinput="bindKeyInput" />
+    </view>
+    <view class="login-item-section">
+      <image src="/images/icon/password.png"></image>
+      <input placeholder="请输入密码" class="login-item-input" placeholder-style="color:gray;" bindinput="bindPassKeyInput" password/>
+    </view>
+    <view class="login-item-button">
+      <button type="primary" size="default" plain="false" loading="{{loading}}" class="login-button" bindtap="isLogin"> 绑定 </button>
+    </view>
+    <view class="error-msg" wx:if="{{error}}">{{error}}</view>
+  </view>
+
+</view>

@@ -1,0 +1,14 @@
+<view class="search-left">
+  <image src="../../images/icon/search.png"></image>
+  <input placeholder="输入想要查找的讨论区" placeholder-style="color:#f5f5f5;" class="login-item-input" auto-focus bindinput="wxSearchInput" />
+</view>
+
+
+<scroll-view scroll-y="true" style="height:{{winHeight}}px" scroll-top="{{scrollTop}}">
+  <view class="selection" wx:for="{{zoneList}}" wx:key="{{item.initial}}">
+    <view class="item_letter" wx:if="{{item.zoneInfo.length != 0}}">{{item.initial}}</view>
+    <view class="item_zone" wx:for="{{item.zoneInfo}}" wx:for-item="ct" data-id="{{ct.id}}" bindtap="bindzone">
+      {{ct.id + '(' + ct.zone +')'}}
+    </view>
+  </view>
+</scroll-view>
